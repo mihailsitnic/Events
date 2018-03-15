@@ -1,0 +1,164 @@
+/* Header
+/* ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## */
+
+.header {
+    background: #fff;
+    border-bottom: 1px solid #ebebeb;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
+.header-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 95.5%;
+    margin: 0 auto;
+}
+
+.header__logo {
+    position: relative;
+    top: 3px;
+    left: -3px;
+}
+
+.header-nav__list {
+    list-style: none;
+    display: flex;
+    position: relative;
+    left: -45px;
+}
+
+.header-nav__li {
+    padding: 0 14px;
+    margin: 0 10px;
+    position: relative;
+}
+
+.header-nav__li:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #487fc0;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.header-nav__li:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.header-nav__li--active {
+    border-bottom: 4px solid #487fc0;
+}
+
+.header-nav__li--active:after {
+    background-color: transparent;
+}
+
+.header-nav__link {
+    text-decoration: none;
+    color: #000;
+    font-size: 17px;
+    position: relative;
+    top: 3px;
+    display: flex;
+    height: 75px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.header-nav__li--active .header-nav__link {
+    color: #487fc0;
+}
+
+
+
+/* Header Menu
+/* ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## */
+
+.header-menu__bt {
+    position: relative;
+    width: 30px;
+    height: 24px;
+    float: right;
+    cursor: pointer;
+    transition: margin-top .3s ease;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.header-menu__bt:before,
+.header-menu__bt:after {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    height: 3px;
+    content: '';
+    width: 100%;
+    transform-origin: 50% 50%;
+    transition: transform 0.25s;
+}
+.header-menu__bt span {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 3px;
+    overflow: hidden;
+    transition: opacity 0.25s;
+}
+.header-menu__bt:before,
+.header-menu__bt:after,
+.header-menu__bt span {
+    background: #444;
+}
+.header-menu__bt:before {
+    transform: translate3d(0, -10px, 0);
+}
+.header-menu__bt:after {
+    transform: translate3d(0, 10px, 0);
+}
+
+/* Header Menu Animation
+/* ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## */
+
+.header-menu__bt.header-menu__bt--active:before {
+    transform: rotate3d(0, 0, 1, 45deg);
+}
+.header-menu__bt.header-menu__bt--active:after {
+    transform: rotate3d(0, 0, 1, -45deg);
+}
+.header-menu__bt.header-menu__bt--active span {
+    opacity: 0;
+}
+
+/* Responsive media queries
+/* ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## */
+
+/* Large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) {
+    .header-nav__list {
+        left: auto;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+    .header-wrap {
+        height: 60px;
+    }
+    .header-nav__list {
+        display: none;
+    }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (max-width: 768px) {}

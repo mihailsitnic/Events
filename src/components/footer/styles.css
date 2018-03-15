@@ -1,0 +1,136 @@
+.footer {
+    background: #fff;
+}
+
+.footer__nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.footer__nav-li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 215px;
+}
+
+.footer__nav-link {
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+}
+
+.footer__nav-link:hover {
+    text-decoration: underline;
+}
+
+.footer__metasocial {
+    background: #000;
+}
+
+.metasocial-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 113px;
+}
+
+.metasocial__social {
+    display: flex;
+    align-items: center;
+}
+
+.social__list {
+    list-style: none;
+    display: flex;
+    padding-right: 8px;
+}
+
+.social__li {
+    padding-right: 15px;
+}
+
+.metasocial__lang {
+    position: relative;
+    padding-left: 15px;
+}
+
+.lang {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 100;
+}
+
+.lang__arrow {
+    width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid #fff;
+    position: absolute;
+    top: 10px;
+    right: -15px;
+}
+
+.metasocial__lang:before {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 15px;
+    background-color: #cfd1d6;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+}
+
+.metasocial__copyright > p {
+    color: #fff;
+    font-weight: 100;
+    font-size: 16px;
+}
+
+/* Responsive media queries
+/* ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## */
+
+/* Large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) {
+    .footer__nav-li {
+        height: 150px;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+    .footer__nav-li {
+        height: 100px;
+    }
+    .metasocial__logo {
+        display: none;
+    }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+    .footer__nav-list {
+        flex-direction: column;
+        padding: 20px 0;
+    }
+    .footer__nav-li {
+        padding: 10px 0;
+    }
+    .metasocial-wrap {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .metasocial__copyright {
+        padding-top: 10px;
+    }
+    .metasocial__copyright > p {
+        font-size: 12px;
+    }
+    .social__list {
+        padding: 0;
+    }
+}

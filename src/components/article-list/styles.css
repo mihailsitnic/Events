@@ -1,0 +1,147 @@
+/* Article List
+/* ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## */
+
+.events {
+    padding-bottom: 40px;
+}
+
+.events-canopy {
+    display: none;
+}
+
+.events-canopy--active {
+    height: 60px;
+}
+
+.events__date {
+    line-height: 12;
+    text-align: center;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #ccc;
+    font-weight: 100;
+}
+
+.events__date--active {
+    display: none;
+}
+
+.search {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.search-scope {
+    background: #fff;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 290px;
+    border-top: 3px solid #f8f8f9;
+    box-shadow: 0 10px 20px rgba(0,0,0,.15);
+    position: absolute;
+    right: 0;
+    z-index: 300;
+}
+
+.search-scope__input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.search-scope__bt {
+    width: 100%;
+    padding: 15px 0;
+    background: #000;
+    color: #fff;
+    border-radius: 3px;
+    margin-top: 10px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.filter-date {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.filter-date-scope {
+    background: #fff;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 290px;
+    position: relative;
+    border-top: 3px solid #f8f8f9;
+    box-shadow: 0 10px 20px rgba(0,0,0,.15);
+    position: absolute;
+    right: 0;
+    z-index: 300;
+}
+
+.filter-date__input {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    outline: none;
+    width: 95%;
+    box-sizing: border-box;
+}
+
+.filter-date__bt {
+    width: 100%;
+    padding: 15px 0;
+    background: #000;
+    color: #fff;
+    border-radius: 3px;
+    margin-top: 10px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.fdi-left {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.fdi-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Responsive media queries
+/* ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## */
+
+/* Large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) {
+    .events__date {
+        line-height: 8;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+    .events__date {
+        line-height: 6;
+    }
+    .filter-date,
+    .search {
+        justify-content: center;
+    }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+    .events__date {
+        line-height: 4;
+    }
+    .filter-date-scope,
+    .search-scope {
+        width: 90%;
+        padding: 20px;
+    }
+}
